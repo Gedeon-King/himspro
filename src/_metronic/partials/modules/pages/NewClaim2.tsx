@@ -1,77 +1,70 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useState} from 'react'
-import {IProfileDetails, profileDetailsInitValues as initialValues} from '../../../../app/modules/accounts/components/settings/SettingsModel'
-
+import React from 'react'
+import {KTSVG} from '../../../helpers'
+import {Link} from 'react-router-dom'
 
 type Props = {
   className: string
-  chartColor: string
 }
 
-const NewClaim2: React.FC<Props> = ({className, chartColor}) => {
-    const [data, setData] = useState<IProfileDetails>(initialValues)
-    const updateData = (fieldsToUpdate: Partial<IProfileDetails>): void => {
-        const updatedData = Object.assign(data, fieldsToUpdate)
-    setData(updatedData)
-  }
-
-  const [loading, setLoading] = useState(false)
+const NewClaim2: React.FC<Props> = ({className}) => {
   return (
-    <div className={`${className}`}>
-        <div
-            className='card-title mt-2 border-0 cursor-pointer p-0'
-            role='button'
-            data-bs-toggle='collapse'
-            data-bs-target='#kt_account_profile_details'
-            aria-expanded='true'
-            aria-controls='kt_account_profile_details'
-        >
-            <div className='card-title m-0'>
-                <h3 className='fw-bolder m-0 fs-7 text-gray-500'>Search For PHIS Member (200016349-0)</h3>
-            </div>
+    <div className={`card ${className}`}>
+      {/* begin::Body */}
+      <div className='card-body py-3'>
+        {/* begin::Table container */}
+        <div className='table-responsive'>
+          {/* begin::Table */}
+          <table className='table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3'>
+            {/* begin::Table head */}
+            <thead>
+              <tr className='fw-bold text-muted'>
+                <th className='min-w-80px'>Surname</th>
+                <th className='min-w-80px'>Firstname</th>
+                <th className='min-w-80px'>Othername</th>
+                <th className='min-w-150px'>Insurance Company</th>
+                <th className='min-w-150px'>Employer</th>
+                <th className='min-w-150px'>Membership No.</th>
+                <th className='min-w-150px'>Hearth Plan</th>
+                <th className='min-w-120px'>Hearth Status</th>
+                <th className='min-w-100px'>Status</th>
+                <th className='min-w-50px'>Sex</th>
+                <th className='min-w-50px'>Actions</th>
+              </tr>
+            </thead>
+            {/* end::Table head */}
+
+            {/* begin::Table body */}
+            <tbody>
+              <tr>
+                <td><Link className='text-dark fw-bold text-hover-primary fs-6' to='/claim/memberclaim'>OFORI</Link></td>
+                <td><Link className='text-dark fw-bold text-hover-primary fs-6' to='/claim/memberclaim'>KENNETH</Link></td>
+                <td><Link className='text-dark fw-bold text-hover-primary fs-6' to='/claim/memberclaim'>EARLVIN</Link></td>
+                <td><Link className='text-dark fw-bold text-hover-primary fs-6' to='/claim/memberclaim'>APEX HEALTH INSURANCE</Link></td>
+                <td><Link className='text-dark fw-bold text-hover-primary fs-6' to='/claim/memberclaim'>APEX HEALTH INSURANCE(CORPORATE)</Link></td>
+                <td><Link className='text-dark fw-bold text-hover-primary fs-6' to='/claim/memberclaim'>200016349-0</Link></td>
+                <td><Link className='text-dark fw-bold text-hover-primary fs-6' to='/claim/memberclaim'>APEX PLATINUM</Link></td>
+                <td>
+                  <span className='badge badge-light-success'>ACTIVE</span>
+                </td>
+                <td>
+                  <span className='badge badge-light-success'>ACTIVE</span>
+                </td>
+                <td><Link className='text-dark fw-bold text-hover-primary fs-6' to='/claim/memberclaim'>MALE</Link></td>
+                <td>
+                  <a href='#' className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm'>
+                    <KTSVG path='/media/icons/duotune/general/gen027.svg' className='svg-icon-3' />
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+            {/* end::Table body */}
+          </table>
+          {/* end::Table */}
         </div>
-
-        <div>
-            <form noValidate className='form'>
-                <div className=' border-top p-4'>
-                    <div className='row mb-1'>
-                        <label className='col-lg-2 col-form-label required fw-bold fs-6 ms-6'>Card No</label>
-
-                        <div className='col-lg-7 me-12'>
-                            <div className='row'>
-                                <div className='col-lg-12 fv-row'>
-                                    <input
-                                        type='text'
-                                        className='form-control form-control-lg form-control-solid mb-2 mb-lg-0'
-                                        placeholder='Card Number'
-                                        // {...formik.getFieldProps('fName')}
-                                    />
-                                    {/* {formik.touched.fName && formik.errors.fName && ( */}
-                                    <div className='fv-plugins-message-container'>
-                                        <div className='fv-help-block'>{/* formik.errors.fName */}</div>
-                                    </div>
-                                    {/* )} */}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className='col-lg-2'>
-                            <div className='row'>
-                                <button type='submit' className='btn btn-primary' disabled={loading}>
-                                {!loading && 'Search'}
-                                {loading && (
-                                    <span className='indicator-progress' style={{display: 'block'}}>
-                                    Please wait...{' '}
-                                    <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
-                                    </span>
-                                )}
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
+        {/* end::Table container */}
+      </div>
+      {/* begin::Body */}
     </div>
   )
 }

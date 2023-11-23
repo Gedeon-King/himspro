@@ -21,7 +21,8 @@ const Header: FC = () => {
         id='#kt_header_menu'
         data-kt-menu='true'
       >
-        <MenuInner />
+        <h2 className='menu-item me-lg-1' style={{color: '#2b276b', fontSize: '35px', fontFamily: 'roboto'}}>Service Provider Portal</h2>
+        {/* <MenuInner /> */}
       </div>
     </div>
   )

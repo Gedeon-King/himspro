@@ -119,26 +119,6 @@ export function Overview() {
           </div>
         </div>
       </div>
-
-      <div className='row gy-10 gx-xl-10'>
-        <div className='col-xl-6'>
-          <ChartsWidget1 className='card-xxl-stretch mb-5 mb-xl-10' />
-        </div>
-
-        <div className='col-xl-6'>
-          <TablesWidget1 className='card-xxl-stretch mb-5 mb-xl-10' />
-        </div>
-      </div>
-
-      <div className='row gy-10 gx-xl-10'>
-        <div className='col-xl-6'>
-          <ListsWidget5 className='card-xxl-stretch mb-5 mb-xl-10' />
-        </div>
-
-        <div className='col-xl-6'>
-          <TablesWidget5 className='card-xxl-stretch mb-5 mb-xl-10' />
-        </div>
-      </div>
     </>
   )
 }

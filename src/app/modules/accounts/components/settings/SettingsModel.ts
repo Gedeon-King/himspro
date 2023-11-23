@@ -9,6 +9,7 @@ export interface IProfileDetails {
   language: string
   timeZone: string
   currency: string
+  cardno: string
   communications: {
     email: boolean
     phone: boolean
@@ -81,6 +82,7 @@ export const profileDetailsInitValues: IProfileDetails = {
   language: '',
   timeZone: '',
   currency: '',
+  cardno: '200016349-0',
   communications: {
     email: false,
     phone: false,

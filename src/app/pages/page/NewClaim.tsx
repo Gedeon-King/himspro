@@ -9,26 +9,10 @@ import {
 
 const NewClaimPage: FC = () => (
   <>
-    {/* begin::Row */}
-    <div className='row gy-5 g-xl-8 mb-6'>
-      <div className='col-xxl-12 card'>
-        <NewClaim1
-            className='card-xl mb-xl-2'
-            chartColor='primary'
-        />
-      </div>
-    </div>
-    {/* end::Row */}
+    <NewClaim1 />
 
     {/* begin::Row */}
-    <div className='row gy-5 g-xl-8'>
-      <div className='col-xxl-12 card'>
-        <NewClaim2
-            className='card-xl mb-xl-2'
-            chartColor='primary'
-        />
-      </div>
-    </div>
+    <NewClaim2 className='mb-5 mb-xl-8' />
     {/* end::Row */}
   </>
 )

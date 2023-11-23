@@ -38,12 +38,14 @@ const AsideDefault: FC = () => {
         {/* begin::Logo */}
         {aside.theme === 'dark' && (
           <Link to='/dashboard'>
-            <h1 className='logo' style={{color: 'whitesmoke', fontSize: '50px', textAlign: 'center', textAlignLast: 'center'}}>HIMS</h1>
+            <h1 className='logo' style={{color: 'whitesmoke', fontSize: '35px', fontFamily: 'roboto', margin: '0 0 0 45px'}}>HIMS</h1>
+            <span className='logo' style={{color: 'whitesmoke', fontSize: '12px', fontFamily: 'roboto', margin: '0px'}}>Health Insurance Management System</span>
           </Link>
         )}
         {aside.theme === 'light' && (
           <Link to='/dashboard'>
-            <h1 className='logo' style={{color: 'whitesmoke', fontSize: '50px', textAlign: 'center', textAlignLast: 'center'}}>HIMS</h1>
+            <h1 className='logo' style={{color: 'whitesmoke', fontSize: '35px', fontFamily: 'roboto', margin: '0 0 0 45px'}}>HIMS</h1>
+            <span className='logo' style={{color: 'whitesmoke', fontSize: '12px', fontFamily: 'roboto', margin: '0px'}}>Health Insurance Management System</span>
           </Link>
         )}
         {/* end::Logo */}

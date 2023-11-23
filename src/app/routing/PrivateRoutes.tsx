@@ -4,6 +4,7 @@ import {MasterLayout} from '../../_metronic/layout/MasterLayout'
 import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
 import BuilderPageWrapper from '../pages/layout-builder/BuilderPageWrapper'
 import { NewClaimWrapper } from '../pages/page/NewClaim'
+import { MemberDetailsWrapper } from '../pages/page/MemberDetails'
 
 const PrivateRoutes = () => {
 
@@ -27,6 +28,8 @@ const PrivateRoutes = () => {
         <Route path='/claim/claimreport' element={<NewClaimWrapper />} />
         <Route path='/claim/claimreport' element={<NewClaimWrapper />} />
         <Route path='/claim/claimreport' element={<NewClaimWrapper />} />
+        
+        <Route path='/claim/memberclaim' element={<MemberDetailsWrapper />} />
 
         <Route path='/preauthorisation/newpreauthorisation' element={<NewClaimWrapper />} />
         <Route path='/preauthorisation/listofpendingpreauthorisation' element={<NewClaimWrapper />} />

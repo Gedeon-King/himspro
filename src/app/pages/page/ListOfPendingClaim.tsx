@@ -11,10 +11,7 @@ const ListOfPendingClaimPage: FC = () => (
     {/* begin::Row */}
     <div className='row gy-5 g-xl-8'>
       <div className='col-xxl-12 card'>
-        <NewClaim1
-            className='card-xl mb-xl-2'
-            chartColor='primary'
-        />
+        
       </div>
     </div>
     {/* end::Row */}
